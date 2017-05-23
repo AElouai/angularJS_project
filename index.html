@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="app" lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Angular Rock</title>
@@ -14,7 +14,7 @@
         }
     </style>
 </head>
-<body >
+<body ng-controller="MainCtrl as main">
 
 
 
@@ -50,15 +50,60 @@
         </form>
     </div>
 </nav>
-<div class="container">
+<div class="container-fluid">
 
-    <h2 class="text-center">Hello World :D </h2>
+    <h2 class="text-center">Hello <i ng-style="style">{{name}}</i> :D </h2>
+
+
+    <blockquote ng-show="showQuota" class="blockquote blockquote-reverse text-center">
+        <p class="mb-0">“Talk is cheap. Show me the code.”</p>
+        <footer class="blockquote-footer"> <cite title="Source Title"> Linus Torvalds</cite></footer>
+    </blockquote>
+
+    <div class="row form-group">
+        <div class="col-md-4">
+            <label for="exampleTextarea">Change CSS Color</label>
+            <input ng-model="style.color" class="form-control" id="exampleTextarea" rows="3"></input>
+        </div>
+        <div class="col-md-4">
+            <label>Name : </label>
+            <input ng-model="name" class="form-control" placeholder="Enter your name here" />
+        </div>
+        <div class="col-md-4">
+            <label></label>
+            <button class="form-control btn btn-danger" ng-click="clickMe()">Linus Torvalds Quota</button>
+        </div>
+    </div>
 
 </div>
 
 <script src="./jquery/dist/jquery.min.js" ></script>
 <script src="./tether/dist/js/tether.min.js" ></script>
 <script src="./bootstrap/dist/js/bootstrap.min.js" ></script>
+
+<script src="./angular/angular.js"></script>
+
+<script>
+    angular
+        .module('app', [])
+        .controller('MainCtrl', ['$scope', MainCtrl]);
+
+    function MainCtrl($scope) {
+
+        $scope.name = 'Angular JS ';
+        $scope.showQuota = false;
+
+        $scope.style = {};
+        $scope.style.color = "white";
+
+        console.log('Hello I am MainCtrl');
+
+        $scope.clickMe = function () {
+            $scope.showQuota = !$scope.showQuota;
+        }
+
+    }
+</script>
 
 </body>
 </html>
