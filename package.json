@@ -1,0 +1,26 @@
+{
+  "name": "angular",
+  "version": "1.0.0",
+  "description": "BDSI Angular training project , level : bg",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/elouaiali/angular.git"
+  },
+  "keywords": [
+    "Angular"
+  ],
+  "author": "Ali Elouai",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/elouaiali/angular#readme",
+  "dependencies": {
+    "bower": "^1.8.0",
+    "express": "^4.15.3"
+  },
+  "devDependencies": {
+    "morgan": "^1.8.1"
+  }
+}
