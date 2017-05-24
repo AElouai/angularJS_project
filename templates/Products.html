@@ -22,27 +22,47 @@
                 </div>
             </div>
         </div>-->
-
         <div ng-repeat="product in products" class="col-md-3 col-sm-6">
-            <div class="card" style="width: 20rem;">
-                <img class="card-img-top  img-thumbnail" src="{{product.img}}" alt="{{product.content}}">
-                <div class="card-block">
-                    <h4 class="card-title">{{product.name}}</h4>
-                    <p class="card-text">{{product.content}}</p>
-                    <hr class="line">
-                    <div class="row">
-                        <div class="col-md-6 col-sm-6">
-                            <p class="price">{{product.unit}}{{product.price}}</p>
-                        </div>
-                        <div class="col-md-6 col-sm-6">
-                            <a href="#" class="btn btn-outline-warning btn-block">Buy</a>
-                        </div>
+            <div class="thumbnail">
+                    <img ng-src="{{product.img}}" alt="{{product.content}}" >
+                    <div class="caption">
+                        <h3>{{product.name}}</h3>
+                        <p>{{product.content}}</p>
+                        <hr class="line">
+                        <div class="row">
+                            <div class="col-md-4 col-sm-6">
+                                <p class="price">{{product.unit}}{{product.price}}</p>
+                            </div>
+                            <div class="col-md-4 col-sm-6">
+                                <button class="btn btn-info btn-block" ng-click="buy(product.id)">Detail</button>
+                            </div>
+                            <div class="col-md-4 col-sm-12">
+                                <button class="btn btn-warning btn-block" >Buy</button>
+                            </div>
 
+                        </div>
                     </div>
                 </div>
-            </div>
         </div>
 
     </div>
 
 </div>
+
+<script type="text/ng-template" id="myModalContent.html">
+    <div class="modal-header">
+        <h3 class="modal-title" id="modal-title">I'm a modal!</h3>
+    </div>
+    <div class="modal-body" id="modal-body">
+        <ul>
+            <li ng-repeat="item in $ctrl.items">
+                <a href="#" ng-click="$event.preventDefault(); $ctrl.selected.item = item">{{ item }}</a>
+            </li>
+        </ul>
+        Selected: <b>{{ $ctrl.selected.item }}</b>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" type="button" ng-click="$ctrl.ok()">OK</button>
+        <button class="btn btn-warning" type="button" ng-click="$ctrl.cancel()">Cancel</button>
+    </div>
+</script>

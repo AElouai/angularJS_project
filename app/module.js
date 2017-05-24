@@ -3,7 +3,10 @@
  */
 angular.module('app',
     [
-        'ui.router'
+        'ui.router',
+        'ngAnimate',
+        'ngSanitize',
+        'ui.bootstrap'
         //We list all dependencies required by the app
     ]
 );
