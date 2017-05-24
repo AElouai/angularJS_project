@@ -2,6 +2,7 @@
 <html ng-app="app" lang="en">
 <head>
     <meta charset="UTF-8">
+    <!--<base href="/">-->
     <title>Angular Rock</title>
     <link href="./bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="./style.css" rel="stylesheet">
@@ -19,13 +20,13 @@
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" ui-sref="Home">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Products</a>
+                <a class="nav-link" ui-sref="Products">Products</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" ui-sref="About">About</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
@@ -74,9 +75,12 @@
 <script src="./bootstrap/dist/js/bootstrap.min.js" ></script>
 
 <script src="./angular/angular.js"></script>
+<script src="./angular-ui-router/release/angular-ui-router.min.js"></script>
+
 
 <script src="./module.js"></script>
 <script src="./controller.js"></script>
+<script src="./route.js"></script>
 
 </body>
 </html>
