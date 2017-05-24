@@ -1,6 +1,8 @@
 /**
  * Created by obito on 24/05/17.
  */
+'use strict';
+
 function config($stateProvider, $urlRouterProvider,$locationProvider) {
 
 
@@ -9,24 +11,28 @@ function config($stateProvider, $urlRouterProvider,$locationProvider) {
     $stateProvider
         .state('Home', {
             url: "/Home",
+            controller: "HomeCtrl",
             templateUrl: "templates/Home.html"
         })
         .state('Products', {
             url: "/Products",
+            controller: "ProductsCtrl",
             templateUrl: "templates/Products.html"
         })
         .state('Product', {
             url: "/Product",
+            controller: "ProductCtrl",
             templateUrl: "templates/Product.html"
         })
         .state('About', {
             url: "/About",
+            controller: "AboutCtrl",
             templateUrl: "templates/About.html"
-        });
+        })
 
 
     // $locationProvider.html5Mode(true).hashPrefix('!');
 
 }
 angular.module('app')
-    .config(config);
+    .config(config)

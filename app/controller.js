@@ -6,16 +6,9 @@ angular.module('app')
 
 function MainCtrl($scope) {
 
-    $scope.name = 'Angular JS ';
-    $scope.showQuota = false;
-
     $scope.style = {};
     $scope.style.color = "white";
 
     console.log('Hello I am MainCtrl');
-
-    $scope.clickMe = function () {
-        $scope.showQuota = !$scope.showQuota;
-    }
 
 }
