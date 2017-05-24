@@ -1,0 +1,22 @@
+<h2 class="text-center">Hello <i ng-style="style">{{name}}</i> :D </h2>
+
+
+<blockquote ng-show="showQuota" class="blockquote blockquote-reverse text-center">
+    <p class="mb-0">“Talk is cheap. Show me the code.”</p>
+    <footer class="blockquote-footer"> <cite title="Source Title"> Linus Torvalds</cite></footer>
+</blockquote>
+
+<div class="row form-group">
+    <div class="col-md-4">
+        <label for="exampleTextarea">Change CSS Color</label>
+        <input ng-model="style.color" class="form-control" id="exampleTextarea" rows="3"></input>
+    </div>
+    <div class="col-md-4">
+        <label>Name : </label>
+        <input ng-model="name" class="form-control" placeholder="Enter your name here" />
+    </div>
+    <div class="col-md-4">
+        <label></label>
+        <button class="form-control btn btn-danger" ng-click="clickMe()">Linus Torvalds Quota</button>
+    </div>
+</div>
