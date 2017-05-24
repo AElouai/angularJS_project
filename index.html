@@ -4,15 +4,7 @@
     <meta charset="UTF-8">
     <title>Angular Rock</title>
     <link href="./bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            padding-top: 5rem;
-        }
-        .starter-template {
-            padding: 3rem 1.5rem;
-            text-align: center;
-        }
-    </style>
+    <link href="./style.css" rel="stylesheet">
 </head>
 <body ng-controller="MainCtrl as main">
 
@@ -83,27 +75,8 @@
 
 <script src="./angular/angular.js"></script>
 
-<script>
-    angular
-        .module('app', [])
-        .controller('MainCtrl', ['$scope', MainCtrl]);
-
-    function MainCtrl($scope) {
-
-        $scope.name = 'Angular JS ';
-        $scope.showQuota = false;
-
-        $scope.style = {};
-        $scope.style.color = "white";
-
-        console.log('Hello I am MainCtrl');
-
-        $scope.clickMe = function () {
-            $scope.showQuota = !$scope.showQuota;
-        }
-
-    }
-</script>
+<script src="./module.js"></script>
+<script src="./controller.js"></script>
 
 </body>
 </html>

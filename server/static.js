@@ -6,6 +6,7 @@ var router  = express.Router();
 
 router.use(express.static(__dirname + '/../bower_components'));
 router.use(express.static(__dirname + '/../app'));
+router.use(express.static(__dirname + '/../assets'));
 router.use('/templates', express.static(__dirname + '/../templates'));
 // router.use(express.static(__dirname + '/../node_modules'));
 
