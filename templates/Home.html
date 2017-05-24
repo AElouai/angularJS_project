@@ -9,7 +9,7 @@
 <div class="row form-group">
     <div class="col-md-4">
         <label for="exampleTextarea">Change CSS Color</label>
-        <input ng-model="style.color" class="form-control" id="exampleTextarea" rows="3"></input>
+        <input ng-model="style.color" ng-change="setColor(style.color)" class="form-control" id="exampleTextarea" rows="3" />
     </div>
     <div class="col-md-4">
         <label>Name : </label>
