@@ -20,8 +20,9 @@ function config($stateProvider, $urlRouterProvider,$locationProvider) {
             templateUrl: "templates/Products.html"
         })
         .state('Product', {
-            url: "/Product",
+            url: "/Product/:id",
             controller: "ProductCtrl",
+            params: {object: null},
             templateUrl: "templates/Product.html"
         })
         .state('About', {
