@@ -2,12 +2,12 @@
  * Created by obito on 23/05/17.
  */
 angular.module('app')
-    .controller('MainCtrl', ['$scope','DB', MainCtrl]);
+    .controller('MainCtrl', ['$scope','DB','Options', MainCtrl]);
 
-function MainCtrl($scope,DB) {
+function MainCtrl($scope,DB,Options) {
 
     $scope.style = {};
-    $scope.style.color = DB.get('color') || "white";
+    $scope.style.color = Options.getColor() ;
 
     $scope.objects = [
         {
@@ -63,7 +63,7 @@ function MainCtrl($scope,DB) {
     console.log('Hello I am MainCtrl');
 
     $scope.setColor = function (color) {
-        DB.set('color' , color);
+        Options.setColor('color' , color);
     }
 
 }
