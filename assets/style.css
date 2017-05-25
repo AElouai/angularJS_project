@@ -13,3 +13,7 @@ body {
     margin: 0 auto;
     color: #333;
 }
+
+.ratingpreview {
+    color: rgba(255, 255, 128, 128);
+}

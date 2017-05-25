@@ -29,6 +29,9 @@
                         <h3>{{product.name}}</h3>
                         <p>{{product.content}}</p>
                         <hr class="line">
+                        <div class="row text-center">
+                            <product-rating value="product.rating" min="1" max="5"></product-rating>
+                        </div>
                         <div class="row">
                             <div class="col-md-4 col-sm-6">
                                 <p class="price">{{product.unit}}{{product.price}}</p>
