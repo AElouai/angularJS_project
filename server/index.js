@@ -5,5 +5,6 @@ var router = require('express').Router();
 
 router.use('/', require('./static'));
 router.use('/api', require('./api'));
+router.use('/api2', require('./api2'));
 
 module.exports = router;
